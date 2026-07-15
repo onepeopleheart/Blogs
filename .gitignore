@@ -1,0 +1,12 @@
+# Hugo 构建输出
+/public/
+
+# Hugo 资源缓存
+/resources/
+
+# Hugo 构建锁
+/.hugo_build.lock
+
+# 系统文件
+Thumbs.db
+.DS_Store

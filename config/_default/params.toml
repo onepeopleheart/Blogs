@@ -1,0 +1,125 @@
+# ============================================================
+# 文件功能：主题参数配置（配色、布局、文章/列表/分类页面行为）
+# 这是改动最频繁的文件，所有主题外观和功能开关都在这里
+# ============================================================
+
+# ----- 全局外观 -----
+colorScheme = "blowfish"                       # 配色方案（16种可选：ocean forest fire slate github neon noir terminal 等）
+defaultAppearance = "light"                    # 默认外观模式（light=亮色 dark=暗色）
+autoSwitchAppearance = true                    # 是否跟随系统自动切换亮/暗模式
+
+# ----- 功能开关 -----
+enableSearch = true                            # 启用全文搜索
+enableCodeCopy = false                         # 启用代码块复制按钮
+enableStructuredBreadcrumbs = false            # 启用结构化的面包屑导航
+
+# ----- 图片处理 -----
+disableImageOptimization = false               # 禁用图片自动优化（缩略图生成）
+disableImageOptimizationMD = false             # 禁用 Markdown 内图片的自动优化
+disableTextInHeader = false                    # 隐藏导航栏中的文字（仅显示图标）
+
+defaultBackgroundImage = "img/background.svg"  # 默认背景图片路径（assets/img/ 相对路径）
+defaultFeaturedImage = "img/default-cover.png" # 所有文章默认封面图（assets/img/ 相对路径）
+
+hotlinkFeatureImage = false                    # 是否允许外部图片作为特色图片
+
+# ----- 资源指纹算法 -----
+fingerprintAlgorithm = "sha512"                # 静态资源缓存指纹算法（sha512/sha384/sha256）
+
+# ----- 头部导航栏 -----
+[header]
+  layout = "fixed-gradient"                    # 导航栏样式（basic fixed fixed-fill fixed-gradient fixed-fill-blur）
+
+# ----- 页脚 -----
+[footer]
+  showMenu = true                              # 显示页脚菜单
+  showCopyright = true                         # 显示版权信息
+  showThemeAttribution = true                   # 显示"由 Hugo & Blowfish 驱动"
+  showAppearanceSwitcher = true                 # 显示亮/暗模式切换按钮
+  showScrollToTop = true                       # 显示返回顶部按钮
+
+# ----- 首页布局 -----
+[homepage]
+  layout = "background"                        # 首页布局（profile hero card background page custom）
+  showRecent = true                            # 是否在首页显示最近文章
+  showRecentItems = 6                          # 显示最近文章的数量
+  showMoreLink = true                         # 是否显示"查看更多"链接
+  showMoreLinkDest = "/posts/"                 # "查看更多"链接目标
+  cardView = false                             # 首页文章是否使用卡片视图（多列）
+  cardViewScreenWidth = false                  # 卡片是否撑满屏幕宽度
+  layoutBackgroundBlur = true                  # background 布局是否启用背景模糊
+
+# ----- 文章页 -----
+[article]
+  showDate = true                              # 显示发布日期
+  showViews = false                            # 显示阅读量（需 Firebase）
+  showLikes = false                            # 显示点赞数（需 Firebase）
+  showDateOnlyInArticle = false                # 只在文章内显示日期（列表不显示）
+  showDateUpdated = false                      # 显示更新日期
+  showAuthor = true                            # 显示作者信息
+  showHero = false                             # 显示文章顶部大图
+  layoutBackgroundBlur = true                  # 文章 hero 背景模糊
+  layoutBackgroundHeaderSpace = true           # 文章 hero 顶部留白
+  showBreadcrumbs = false                      # 显示面包屑导航
+  showDraftLabel = true                        # 草稿文章显示"草稿"标签
+  showEdit = false                             # 显示"编辑此页"链接
+  editAppendPath = true                        # 编辑链接是否附加文件路径
+  seriesOpened = false                         # 系列文章默认展开
+  showHeadingAnchors = true                    # 标题显示锚点链接
+  showPagination = true                        # 显示上一篇/下一篇导航
+  invertPagination = false                     # 翻转上一篇/下一篇顺序
+  showReadingTime = true                       # 显示预计阅读时间
+  showTableOfContents = true                  # 显示文章目录
+  showTaxonomies = true                       # 显示文章分类法
+  showCategories = true                        # 显示文章分类
+  showTags = true                              # 显示文章标签
+  showCategoriesInSecondaryColor = false       # 分类标签使用辅助色区分
+  showAuthorsBadges = false                    # 显示作者徽章
+  showWordCount = true                         # 显示文章字数
+  showZenMode = false                          # 启用禅模式（专注阅读）
+
+# ----- 列表页（/posts/ /tags/ 等）-----
+[list]
+  showHero = false                             # 列表页是否显示顶部大图
+  layoutBackgroundBlur = true                  # 列表 hero 背景模糊
+  layoutBackgroundHeaderSpace = true           # 列表 hero 顶部留白
+  showBreadcrumbs = false                      # 列表页显示面包屑
+  showSummary = true                           # 列表显示文章摘要
+  showViews = false                            # 列表显示阅读量
+  showLikes = false                            # 列表显示点赞数
+  showTableOfContents = false                  # 列表显示目录
+  showCards = true                             # 列表项显示卡片边框效果
+  orderByWeight = false                        # 是否按权重排序
+  groupByYear = true                           # 是否按年份分组
+  cardView = false                             # 列表是否使用卡片视图（多列）
+  cardViewScreenWidth = false                  # 卡片是否撑满屏幕
+  constrainItemsWidth = false                  # 是否限制列表项宽度
+
+# ----- 站点地图 -----
+[sitemap]
+  excludedKinds = ["taxonomy", "term"]         # 从站点地图排除的分类页面
+
+# ----- 分类索引页（如 /tags/）-----
+[taxonomy]
+  showTermCount = true                         # 显示每个分类下的文章数量
+  showHero = false                             # 是否显示顶部大图
+  layoutBackgroundBlur = true
+  layoutBackgroundHeaderSpace = true
+  showBreadcrumbs = false
+  showViews = false
+  showLikes = false
+  showTableOfContents = false
+  cardView = false
+
+# ----- 具体分类/标签页（如 /tags/测试/）-----
+[term]
+  showHero = false                             # 是否显示顶部大图
+  layoutBackgroundBlur = true
+  layoutBackgroundHeaderSpace = true
+  showBreadcrumbs = false
+  showViews = false
+  showLikes = false
+  showTableOfContents = true                   # 显示目录
+  groupByYear = false                          # 是否按年份分组
+  cardView = false                             # 是否使用卡片视图
+  cardViewScreenWidth = false

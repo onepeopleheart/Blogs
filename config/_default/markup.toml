@@ -1,0 +1,31 @@
+# ============================================================
+# 文件功能：Markdown 渲染配置
+# 控制：代码高亮、数学公式、目录层级
+# 基本不需要修改
+# ============================================================
+
+[goldmark]
+  [goldmark.parser]
+    wrapStandAloneImageWithinParagraph = false    # 独立图片不包裹在 <p> 标签中
+
+    [goldmark.parser.attribute]
+      block = true                                # 启用 Markdown 块级属性（如 {.class}）
+
+  [goldmark.renderer]
+    unsafe = true                                 # 允许渲染原始 HTML（否则会被转义）
+
+  [goldmark.extensions]
+    [goldmark.extensions.passthrough]             # 启用数学公式（KaTeX）
+      enable = true
+      [goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]       # 块级公式定界符
+        inline = [['\(', '\)']]                    # 行内公式定界符
+
+# ----- 代码高亮 -----
+[highlight]
+  noClasses = false                                # false=使用 CSS 类名控制高亮（推荐）
+
+# ----- 目录配置 -----
+[tableOfContents]
+  startLevel = 2                                  # 目录从 h2 开始
+  endLevel = 4                                    # 目录到 h4 结束

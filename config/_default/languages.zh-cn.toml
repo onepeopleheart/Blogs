@@ -1,0 +1,28 @@
+# ============================================================
+# 文件功能：中文语言与作者信息配置
+# 控制：网站标题、作者名称/头像/简介、社交链接
+# ============================================================
+
+locale = "zh-cn"                              # 语言区域代码
+label = "简体中文"                             # 语言显示标签
+weight = 1                                    # 权重（多语言时决定优先级，越小越优先）
+title = "一个人心"                              # 网站标题（显示在浏览器标签页和导航栏）
+
+[params]
+  displayName = "简体中文"                     # 导航栏语言切换器的显示名称
+  isoCode = "zh-cn"                           # ISO 语言代码
+  rtl = false                                 # 是否从右到左书写（中文为 false）
+  dateFormat = "2006-01-02"                   # 日期格式（Go 语言时间模板）
+  logo = "img/profile.png"                    # 顶部导航栏 Logo 图片路径（assets/img/ 相对路径）
+  description = "学习是一个发现自己有多无知的过程"           # 站点描述（用于 SEO 和社交分享）
+
+[params.author]
+  name = "一个人心"                             # 作者名（首页和文章页显示）
+  image = "img/profile.png"                    # 作者头像（assets/img/ 相对路径）
+  headline = "学习是一个发现自己有多无知的过程"                # 首页头像下方的副标题
+  bio = "学习是一个发现自己有多无知的过程"                   # 作者简介
+  links = [                                   # 社交链接（按顺序显示在首页头像下方）
+    { github = "https://github.com/onepeopleheart" },
+    { bilibili = "https://space.bilibili.com/54774023" },
+    { zhihu = "https://www.zhihu.com/people/yi-ge-ren-xin-61" },
+  ]

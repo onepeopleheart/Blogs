@@ -1,0 +1,68 @@
+# ============================================================
+# 文件功能：站点基础配置
+# 控制：站点地址、语言、分页、分类法、站点地图、相关文章
+# ============================================================
+
+theme = "blowfish"                           # 使用的主题名称
+baseURL = "http://localhost:1313/"           # 站点根地址（部署时改为真实域名）
+defaultContentLanguage = "zh-cn"             # 默认语言
+hasCJKLanguage = true                        # 启用中日韩语言优化（自动摘要截断等）
+
+enableRobotsTXT = true                       # 生成 robots.txt
+summaryLength = 30                           # 文章摘要字数
+
+buildDrafts = false                          # 是否构建草稿（true=包含草稿）
+buildFuture = false                          # 是否构建未来日期的文章
+
+enableEmoji = true                           # 启用 emoji 支持
+
+# ----- 分页 -----
+[pagination]
+  pagerSize = 10                             # 每页显示文章数
+
+# ----- 图片处理 -----
+[imaging]
+  anchor = 'Center'                          # 图片裁剪锚点
+
+# ----- 分类法定义 -----
+[taxonomies]
+  tag = "tags"                               # 标签
+  category = "categories"                    # 分类
+  series = "series"                          # 系列
+
+# ----- 站点地图 -----
+[sitemap]
+  changefreq = 'weekly'                      # 更新频率
+  filename = 'sitemap.xml'                   # 文件名
+  priority = 0.5                             # 默认优先级
+
+# ----- 输出格式 -----
+[outputs]
+  home = ["HTML", "RSS", "JSON"]             # 首页输出：HTML + RSS订阅 + JSON搜索索引
+
+# ----- 相关文章推荐 -----
+[related]
+  threshold = 0                              # 相关性阈值（0=所有文章都参与匹配）
+  toLower = false                            # 匹配时是否转小写
+
+  [[related.indices]]
+    name = "tags"                            # 按标签匹配
+    weight = 100
+
+  [[related.indices]]
+    name = "categories"                      # 按分类匹配
+    weight = 100
+
+  [[related.indices]]
+    name = "series"                          # 按系列匹配
+    weight = 50
+
+  [[related.indices]]
+    name = "date"                            # 按日期匹配
+    weight = 10
+
+  [[related.indices]]
+    applyFilter = false
+    name = 'fragmentrefs'
+    type = 'fragments'
+    weight = 10
