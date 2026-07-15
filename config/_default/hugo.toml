@@ -4,7 +4,7 @@
 # ============================================================
 
 theme = "blowfish"                           # 使用的主题名称
-baseURL = "http://localhost:1313/"           # 站点根地址（部署时改为真实域名）
+baseURL = "https://onepeopleheart.github.io/Blogs/"           # 站点根地址（部署时改为真实域名）
 defaultContentLanguage = "zh-cn"             # 默认语言
 hasCJKLanguage = true                        # 启用中日韩语言优化（自动摘要截断等）
 
