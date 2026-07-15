@@ -1,7 +1,8 @@
 ---
 title: "测试文章一：短文章"
-date: 2026-07-14
+date: 2026-07-09
 tags: ["测试"]
+categories: ["测试"]
 description: "一篇很短的测试文章"
 ---
 

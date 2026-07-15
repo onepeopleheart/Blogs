@@ -1,7 +1,8 @@
 ---
 title: "测试文章三：关于 Hugo 静态站点生成器"
-date: 2026-07-12
+date: 2026-07-11
 tags: ["Hugo", "测试"]
+categories: ["教程"]
 ---
 
 ## 什么是 Hugo

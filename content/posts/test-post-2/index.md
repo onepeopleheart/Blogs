@@ -1,7 +1,8 @@
 ---
 title: "测试文章二：Markdown 格式测试"
-date: 2026-07-13
+date: 2026-07-10
 tags: ["测试", "Markdown"]
+categories: ["教程"]
 description: "测试各种 Markdown 语法渲染效果"
 ---
 

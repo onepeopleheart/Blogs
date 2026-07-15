@@ -1,7 +1,8 @@
 ---
 title: "测试文章四：Blowfish 主题特性概览"
-date: 2026-07-11
+date: 2026-07-12
 tags: ["Blowfish", "主题"]
+categories: ["教程"]
 ---
 
 ## Blowfish 主题的主要特性
