@@ -10,6 +10,3 @@
 # 系统文件
 Thumbs.db
 .DS_Store
-
-# 本地工具
-start.bat
